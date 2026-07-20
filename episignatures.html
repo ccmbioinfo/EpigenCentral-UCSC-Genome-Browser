@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EpigenCentral DNA Methylation Episignatures</title>
+</head>
+
+<body>
+
+<h1>EpigenCentral DNA Methylation Episignatures</h1>
+
+<p>
+This track displays CpG probes from 20 published DNA methylation
+episignatures curated by
+<a href="https://epigen.ccm.sickkids.ca/" target="_blank">
+<b>EpigenCentral</b></a>.
+Each probe represents a differentially methylated CpG associated with
+one or more genetic disorders.
+When a CpG is shared among multiple episignatures, the displayed
+color and mouse-over information are determined by the episignature
+showing the largest absolute methylation change (largest absolute
+deltaBeta value).
+</p>
+
+<h2>Color Coding</h2>
+Delta beta values are calculated as mean methylation in cases 
+minus mean methylation in controls (deltaBeta = Cases − Controls). 
+Positive deltaBeta values indicate increased methylation in cases (Gain), 
+whereas negative deltaBeta values indicate decreased methylation in cases (Loss).
+<ul>
+<li>
+<span style="color:#FF5F01;"><b>Orange</b></span>:
+Gain of methylation (positive deltaBeta)
+</li>
+
+<li>
+<span style="color:#0072EB;"><b>Blue</b></span>:
+Loss of methylation (negative deltaBeta)
+</li>
+</ul>
+
+<h2>Track Layout</h2>
+
+<ul>
+<li><b>Dense view</b>: Colored bars only.</li>
+<li><b>Pack view</b>: Colored bars with CpG probe IDs.</li>
+<li><b>Full view</b>: Colored bars with CpG probe IDs.</li>
+</ul>
+
+<h2>Mouse-over Information</h2>
+
+<p>
+Hovering over a CpG displays:
+</p>
+
+<ul>
+<li>The episignature driving the displayed color.</li>
+<li>The methylation direction (Gain or Loss).</li>
+<li>The corresponding deltaBeta value.</li>
+</ul>
+
+<p>
+Example:
+</p>
+
+<pre>
+NSD1 | Loss | -0.346
+</pre>
+
+<h2>Item Details Page</h2>
+
+<p>
+Clicking on a CpG probe opens a detailed comparison table showing
+all episignatures that contain that CpG.
+</p>
+
+<p>
+The table includes:
+</p>
+
+<ul>
+<li>Gene</li>
+<li>Associated disorder</li>
+<li>OMIM identifier</li>
+<li>Methylation direction</li>
+<li>deltaBeta</li>
+<li>Adjusted p-value</li>
+<li>Multiple-testing correction method</li>
+</ul>
+
+<h2>Filters</h2>
+
+<ul>
+
+<li>
+<b>Episignature Filter</b>:
+Select one or more episignatures to display CpGs that overlap
+the chosen signatures.
+</li>
+
+<li>
+<b>Number of Overlapping Episignatures</b>:
+Restrict the display to CpGs present in a specified number
+of episignatures.
+</li>
+
+</ul>
+
+<h2>Interpretation</h2>
+
+<p>
+A CpG observed in multiple episignatures may represent:
+</p>
+
+<ul>
+<li>Shared biological pathways.</li>
+<li>Common chromatin regulatory mechanisms.</li>
+<li>Convergent neurodevelopmental disease processes.</li>
+<li>Overlapping epigenetic signatures between syndromes.</li>
+</ul>
+
+<p>
+Users interested in specific disease mechanisms can use the
+episignature filters to identify shared CpGs between disorders
+such as autism-related episignatures, overgrowth syndromes,
+and neurodevelopmental disorders.
+</p>
+
+<h2>Included Episignatures</h2>
+<p>Click an OMIM ID or Reference to open the corresponding record.</p>
+<table border='1' cellpadding='4' cellspacing='0'>
+<tr>
+<th>Gene</th>
+<th>Disorder</th>
+<th>OMIM</th>
+<th>Reference</th>
+</tr>
+<tr><td>16pDel</td><td>Autism spectrum</td><td><a href=https://omim.org/entry/611913 target="_blank">611913</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/31311581/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/31311581/</a></td></tr>
+<tr><td>ANKRD11</td><td>KBG syndrome</td><td><a href=https://omim.org/entry/148050 target="_blank">148050</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/36440975/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/36440975/</a></td></tr>
+<tr><td>ASXL1</td><td>Bohring-Opitz syndrome</td><td><a href=https://omim.org/entry/605039 target="_blank">605039</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/35361921/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/35361921/</a></td></tr>
+<tr><td>CHD7</td><td>CHARGE syndrome</td><td><a href=https://omim.org/entry/214800 target="_blank">214800</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/28475860/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/28475860/</a></td></tr>
+<tr><td>CHD8</td><td>Intellectual developmental disorder with autism and macrocephaly</td><td><a href=https://omim.org/entry/615032 target="_blank">615032</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/31311581/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/31311581/</a></td></tr>
+<tr><td>Dup7</td><td>Chromosome 7q11.23 duplication syndrome</td><td><a href=https://omim.org/entry/609757 target="_blank">609757</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/26166478/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/26166478/</a></td></tr>
+<tr><td>DYRK1A</td><td>Intellectual developmental disorder, autosomal dominant 7</td><td><a href=https://omim.org/entry/614104 target="_blank">614104</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/34345024/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/34345024/</a></td></tr>
+<tr><td>EHMT1</td><td>Kleefstra syndrome 1</td><td><a href=https://omim.org/entry/610253 target="_blank">610253</a></td><td><a href=http://dx.doi.org/10.20517/jtgg.2020.23 target="_blank">http://dx.doi.org/10.20517/jtgg.2020.23</a></td></tr>
+<tr><td>EZH2</td><td>Weaver syndrome</td><td><a href=https://omim.org/entry/277590 target="_blank">277590</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/32243864/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/32243864/</a></td></tr>
+<tr><td>FHS</td><td>Floating-Harbor syndrome</td><td><a href=https://omim.org/entry/136140 target="_blank">136140</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/33909990/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/33909990/</a></td></tr>
+<tr><td>HNRNPK</td><td>Au-Kline syndrome</td><td><a href=https://omim.org/entry/616580 target="_blank">616580</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/36130591/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/36130591/</a></td></tr>
+<tr><td>KANSL1</td><td>Koolen-De Vries syndrome</td><td><a href=https://omim.org/entry/610443 target="_blank">610443</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/38282074/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/38282074/</a></td></tr>
+<tr><td>KMT2C</td><td>Kleefstra syndrome 2</td><td><a href=https://omim.org/entry/617768 target="_blank">617768</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/39013459/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/39013459/</a></td></tr>
+<tr><td>KMT2D_2017</td><td>Kabuki syndrome 1</td><td><a href=https://omim.org/entry/147920 target="_blank">147920</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/28475860/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/28475860/</a></td></tr>
+<tr><td>KMT2D_2026</td><td>Kabuki syndrome 1</td><td><a href=https://omim.org/entry/147920 target="_blank">147920</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/42134323/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/42134323/</a></td></tr>
+<tr><td>MN1</td><td>CEBALID syndrome</td><td><a href=https://omim.org/entry/618774 target="_blank">618774</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/40280028/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/40280028/</a></td></tr>
+<tr><td>NSD1</td><td>Sotos syndrome</td><td><a href=https://omim.org/entry/117550 target="_blank">117550</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/26690673/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/26690673/</a></td></tr>
+<tr><td>SMARCA2</td><td>Nicolaides-Baraitser syndrome</td><td><a href=https://omim.org/entry/601358 target="_blank">601358</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/31288860/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/31288860/</a></td></tr>
+<tr><td>SRCAP</td><td>Developmental delay, hypotonia, musculoskeletal defects, and behavioral abnormalities</td><td><a href=https://omim.org/entry/619595 target="_blank">619595</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/33909990/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/33909990/</a></td></tr>
+<tr><td>Williams</td><td>Williams-Beuren syndrome</td><td><a href=https://omim.org/entry/194050 target="_blank">194050</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/26166478/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/26166478/</a></td></tr>
+</table>
+<h2>Probe Annotation</h2>
+
+<p>
+All CpG probes displayed in this track were mapped using Illumina
+Infinium MethylationEPIC v2 (EPIC v2) array annotations. Only probes
+with valid hg38 genomic coordinates and present in the EPIC v2
+annotation set were included in the final track.
+</p>
+
+<hr>
+
+<p>
+Generated from
+<a href="https://epigen.ccm.sickkids.ca/" target="_blank">
+EpigenCentral
+</a>
+curated DNA methylation episignature datasets.
+</p>
+
+</body>
+</html>

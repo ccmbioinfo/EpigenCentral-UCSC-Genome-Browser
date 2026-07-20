@@ -1,0 +1,6 @@
+hub DNAm Episignatures by EpigenCentral
+shortLabel DNAm Episignatures by EpigenCentral bigBed
+longLabel DNA methylation episignatures by EpigenCentral (20 DNAm signatures)
+genomesFile genomes.txt
+email prajkta.kallurkar@sickkids.ca
+descriptionUrl https://raw.githubusercontent.com/prajkta9/ucsc-methylation-test/refs/heads/main/EpigenCentralHub_final/episignatures.html
