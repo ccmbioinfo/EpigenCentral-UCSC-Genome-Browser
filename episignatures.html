@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>EpigenCentral DNA Methylation Episignatures</title>
+<title>EpigenCentral DNA Methylation Signatures</title>
 </head>
 
 <body>
 
-<h1>EpigenCentral DNA Methylation Episignatures</h1>
+<h1>EpigenCentral DNA Methylation Signatures</h1>
 
 <p>
 This track displays CpG probes from all published DNA methylation
-episignatures curated by
+signatures available through
 <a href="https://epigen.ccm.sickkids.ca/" target="_blank">
 <b>EpigenCentral</b></a>.
-Each probe represents a differentially methylated CpG associated with
+Each probe represents statistically significant differentially methylated CpG associated with
 one or more genetic disorders.
 When a CpG is shared among multiple episignatures, the displayed
 color and mouse-over information are determined by the episignature
@@ -53,17 +53,17 @@ Hovering over a CpG displays:
 </p>
 
 <ul>
-<li>The episignature driving the displayed color.</li>
+<li>The episignature driving the displayed color (highest absolute deltaBeta).</li>
 <li>The methylation direction (Gain or Loss).</li>
 <li>The corresponding deltaBeta value.</li>
 </ul>
 
 <p>
-Example:
+Example (cg16689481):
 </p>
 
 <pre>
-NSD1 | Loss | -0.346
+NSD1 | Gain | 0.318
 </pre>
 
 <h2>Item Details Page</h2>
@@ -87,6 +87,23 @@ The table includes:
 <li>Multiple-testing correction method</li>
 </ul>
 
+</p>
+
+<p>Example (cg16689481):</p>
+<table border='1' cellpadding='7' cellspacing='0'>
+<tr>
+<th>Gene</th>
+<th>Disorder</th>
+<th>OMIM_ID</th>
+<th>Direction</th>
+<th>deltaBeta</th>
+<th>adjPValue</th>
+<th>Correction</th>
+</tr>
+<tr><td>NSD1</td><td>Sotos syndrome</td><td>117550</td><td>Gain</td><td>0.318</td><td>0.00139</td><td>Bonferroni</td></tr>
+<tr><td>T21</td><td>Down syndrome</td><td>190685</td><td>Gain</td><td>0.166</td><td>0.00231</td><td>BH-FDR</td></tr>
+</table>
+
 <h2>Filters</h2>
 
 <ul>
@@ -105,17 +122,7 @@ of episignatures.
 
 </ul>
 
-<h2>Interpretation</h2>
 
-<p>
-A CpG observed in multiple episignatures may represent:
-</p>
-
-<ul>
-<li>Shared biological pathways.</li>
-<li>Common chromatin regulatory mechanisms.</li>
-<li>Convergent neurodevelopmental disease processes.</li>
-<li>Overlapping epigenetic signatures between syndromes.</li>
 </ul>
 
 <p>
@@ -171,11 +178,11 @@ annotation set were included in the final track.
 <hr>
 
 <p>
-Generated from
+DNA methylation signature sites available through 
 <a href="https://epigen.ccm.sickkids.ca/" target="_blank">
-EpigenCentral
+EpigenCentral.
 </a>
-curated DNA methylation episignature datasets.
+
 </p>
 
 </body>

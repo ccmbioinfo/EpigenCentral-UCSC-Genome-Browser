@@ -1,6 +1,6 @@
-hub DNAm episignatures by EpigenCentral
-shortLabel DNAm episignatures by EpigenCentral bigBed
-longLabel DNA methylation episignatures by EpigenCentral
+hub DNAm signatures by EpigenCentral
+shortLabel DNAm signatures by EpigenCentral bigBed
+longLabel DNA methylation signatures by EpigenCentral
 genomesFile genomes.txt
 email prajkta.kallurkar@sickkids.ca
 descriptionUrl https://raw.githubusercontent.com/ccmbioinfo/EpigenCentral-UCSC-Genome-Browser/refs/heads/main/episignatures.html
