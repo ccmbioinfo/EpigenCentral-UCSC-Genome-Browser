@@ -81,6 +81,7 @@ The comparison table contains:
 |--------|--------|--------|--------|
 | 16pDel | Autism spectrum | https://omim.org/entry/611913 | https://pubmed.ncbi.nlm.nih.gov/31311581/ |
 | ANKRD11 | KBG syndrome | https://omim.org/entry/148050 | https://pubmed.ncbi.nlm.nih.gov/36440975/ |
+| ARID1B | Coffin-Siris syndrome 1 | https://omim.org/entry/135900 | https://pubmed.ncbi.nlm.nih.gov/42527582/ |
 | ASXL1 | Bohring-Opitz syndrome | https://omim.org/entry/605039 | https://pubmed.ncbi.nlm.nih.gov/35361921/ |
 | CHD7 | CHARGE syndrome | https://omim.org/entry/214800 | https://pubmed.ncbi.nlm.nih.gov/28475860/ |
 | CHD8 | Intellectual developmental disorder with autism and macrocephaly | https://omim.org/entry/615032 | https://pubmed.ncbi.nlm.nih.gov/31311581/ |
@@ -91,6 +92,8 @@ The comparison table contains:
 | FHS | Floating-Harbor syndrome | https://omim.org/entry/136140 | https://pubmed.ncbi.nlm.nih.gov/33909990/ |
 | HNRNPK | Au-Kline syndrome | https://omim.org/entry/616580 | https://pubmed.ncbi.nlm.nih.gov/36130591/ |
 | KANSL1 | Koolen-De Vries syndrome | https://omim.org/entry/610443	| https://pubmed.ncbi.nlm.nih.gov/38282074/ |
+| KMT2A | Wiedemann-Steiner syndrome | https://omim.org/entry/605130 |	https://pubmed.ncbi.nlm.nih.gov/42318777/ |
+| KMT2B | Dystonia 28, childhood-onset | https://omim.org/entry/617284 |	https://pubmed.ncbi.nlm.nih.gov/42318777/ |
 | KMT2C | Kleefstra syndrome 2 | https://omim.org/entry/617768 |	https://pubmed.ncbi.nlm.nih.gov/39013459/ |
 | KMT2D_2017 | Kabuki syndrome 1 | https://omim.org/entry/147920 | https://pubmed.ncbi.nlm.nih.gov/28475860/ |
 | KMT2D_2026 | Kabuki syndrome 1 | https://omim.org/entry/147920 | https://pubmed.ncbi.nlm.nih.gov/42134323/ |
@@ -98,6 +101,7 @@ The comparison table contains:
 | NSD1 | Sotos syndrome | https://omim.org/entry/117550 | https://pubmed.ncbi.nlm.nih.gov/26690673/ |
 | SMARCA2 | Nicolaides-Baraitser syndrome | https://omim.org/entry/601358 | https://pubmed.ncbi.nlm.nih.gov/31288860/ |
 | SRCAP | Developmental delay, hypotonia, musculoskeletal defects, and behavioral abnormalities | https://omim.org/entry/619595 | https://pubmed.ncbi.nlm.nih.gov/33909990/ |
+| T21 | Down syndrome | https://omim.org/entry/190685 | https://pubmed.ncbi.nlm.nih.gov/42492524/ |
 | Williams | Williams-Beuren syndrome | https://omim.org/entry/194050 | https://pubmed.ncbi.nlm.nih.gov/26166478/ |
 
 ---

@@ -1,17 +1,17 @@
 track filterValuesEpisignature
 shortLabel EpigenCentral
-longLabel DNAm Episignatures by EpigenCentral
+longLabel DNAm episignatures by EpigenCentral
 visibility pack
 type bigBed 9 +
-filterValues.signatureList 16pDel|Autism spectrum,ANKRD11|KBG syndrome,ASXL1|Bohring-Opitz syndrome,CHD7|CHARGE syndrome,CHD8|Intellectual developmental disorder with autism and macrocephaly,Dup7|Chromosome 7q11.23 duplication syndrome,DYRK1A|Intellectual developmental disorder autosomal dominant 7,EHMT1|Kleefstra syndrome 1,EZH2|Weaver syndrome,FHS|Floating-Harbor syndrome,HNRNPK|Au-Kline syndrome,KANSL1|Koolen-De Vries syndrome,KMT2C|Kleefstra syndrome 2,KMT2D_2017|Kabuki syndrome 1 (2017),KMT2D_2026|Kabuki syndrome 1 (2026),MN1|CEBALID syndrome,NSD1|Sotos syndrome,SMARCA2|Nicolaides-Baraitser syndrome,SRCAP|Developmental delay hypotonia musculoskeletal defects and behavioral abnormalities,Williams|Williams-Beuren syndrome
+filterValues.signatureList 16pDel|Autism spectrum (16pDel),ANKRD11|KBG syndrome (ANKRD11),ARID1B|Coffin-Siris syndrome 1 (ARID1B),ASXL1|Bohring-Opitz syndrome (ASXL1),CHD7|CHARGE syndrome (CHD7),CHD8|Intellectual developmental disorder with autism and macrocephaly (CHD8),Dup7|Chromosome 7q11.23 duplication syndrome (Dup7),DYRK1A|Intellectual developmental disorder autosomal dominant 7 (DYRK1A),EHMT1|Kleefstra syndrome 1 (EHMT1),EZH2|Weaver syndrome (EZH2),FHS|Floating-Harbor syndrome (FHS),HNRNPK|Au-Kline syndrome (HNRNPK),KANSL1|Koolen-De Vries syndrome (KANSL1),KMT2A|Wiedemann-Steiner syndrome (KMT2A),KMT2B|Dystonia 28 childhood-onset (KMT2B),KMT2C|Kleefstra syndrome 2 (KMT2C),KMT2D_2017|Kabuki syndrome 1 (KMT2D - 2017 publication),KMT2D_2026|Kabuki syndrome 1 (KMT2D - 2026 publication),MN1|CEBALID syndrome (MN1),NSD1|Sotos syndrome (NSD1),SMARCA2|Nicolaides-Baraitser syndrome (SMARCA2),SRCAP|Developmental delay hypotonia musculoskeletal defects and behavioral abnormalities (SRCAP_upstream),T21|Down syndrome (Trisomy 21),Williams|Williams-Beuren syndrome (Williams)
 filterType.signatureList multipleListAnd
 filter.nSignatures 0
 filterByRange.nSignatures on
-filterLimits.nSignatures 1:20
+filterLimits.nSignatures 1:24
 url https://omim.org/entry/$$
 urlLabel displayOmim
 mouseOverField mouseOver
-bigDataUrl https://raw.githubusercontent.com/prajkta9/ucsc-methylation-test/refs/heads/main/EpigenCentralHub_final/episignatures.bb
+bigDataUrl https://raw.githubusercontent.com/ccmbioinfo/EpigenCentral-UCSC-Genome-Browser/refs/heads/main/episignatures.bb
 detailsDynamicTable comparisonTable
 itemRgb on
 html episignatures
