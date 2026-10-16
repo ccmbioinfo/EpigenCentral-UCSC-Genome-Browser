@@ -1,6 +1,6 @@
 # EpigenCentral DNA Methylation Episignature UCSC Track Hub
 
-A UCSC Genome Browser Track Hub for visualizing curated DNA methylation (DNAm) episignatures from **EpigenCentral**.
+A UCSC Genome Browser Track Hub for visualizing curated DNA methylation (DNAm) signatures from **EpigenCentral**.
 
 This repository contains:
 
@@ -11,7 +11,7 @@ This repository contains:
 
 ## About EpigenCentral
 
-EpigenCentral is a research resource for DNA methylation episignatures associated with rare genetic disorders.
+EpigenCentral is a research resource for DNA methylation signatures associated with rare genetic disorders.
 
 🔗 https://epigen.ccm.sickkids.ca/
 

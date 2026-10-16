@@ -9,42 +9,79 @@
 <h1>EpigenCentral DNA Methylation Signatures</h1>
 
 <p>
-This track displays CpG probes from all published DNA methylation
-signatures available through
+This track is part of the Episignatures collection.
+It shows the individual CpG sites that make up the DNA methylation signatures 
+available on
 <a href="https://epigen.ccm.sickkids.ca/" target="_blank">
-<b>EpigenCentral</b></a>.
-Each probe represents statistically significant differentially methylated CpG associated with
-one or more genetic disorders.
-When a CpG is shared among multiple episignatures, the displayed
-color and mouse-over information are determined by the episignature
-showing the largest absolute methylation change (largest absolute
-deltaBeta value).
+<b>EpigenCentral</b></a> a portal from the Centre for Computational Medicine and 
+the Weksberg lab at the Hospital for Sick Children in Toronto where a user can 
+upload a methylation array sample and have it classified against those signatures. 
+</p>
+<p>
+The track covers 15,035 CpG sites drawn from 24 episignatures for 23 rare disorders. 
+Every site is one that was found to be differentially methylated between affected 
+individuals and controls in the study that published the signature. A site is 
+often part of the signature of more than one disorder, so one row is shown per 
+site and all the episignatures that report it are listed together on that row.
 </p>
 
-<h2>Color Coding</h2>
-Delta beta values are calculated as mean methylation in cases 
-minus mean methylation in controls (deltaBeta = Cases − Controls). 
-Positive deltaBeta values indicate increased methylation in cases (Gain), 
-whereas negative deltaBeta values indicate decreased methylation in cases (Loss).
-<ul>
-<li>
-<span style="color:#FF5F01;"><b>Orange</b></span>:
-Gain of methylation (positive deltaBeta)
-</li>
+<h2>Display Conventions and Configuration</h2>
+<p>
+Each CpG site is drawn as a single-base feature, colored by the direction of the 
+methylation change. Delta-beta is the mean methylation in cases minus the mean 
+methylation in controls, so a positive value is a gain of methylation in cases 
+and a negative value is a loss. Where a site belongs to several episignatures, 
+the color, the mouse-over, and the delta-beta shown come from the episignature 
+with the largest absolute delta-beta at that site.
+</p>
 
-<li>
-<span style="color:#0072EB;"><b>Blue</b></span>:
-Loss of methylation (negative deltaBeta)
-</li>
-</ul>
 
-<h2>Track Layout</h2>
+<table border="1"
+       cellpadding="10"
+       cellspacing="0"
+       style="border-collapse:collapse; margin-top:10px; margin-bottom:10px;">
+  <tr>
+    <td style="background-color:#FF5F01; width:65px;"></td>
+    <td style="font-size:18px;">
+      Gain of methylation in cases, positive delta-beta
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color:#0072EB; width:65px;"></td>
+    <td style="font-size:18px;">
+      Loss of methylation in cases, negative delta-beta
+    </td>
+  </tr>
+</table>
 
-<ul>
-<li><b>Dense view</b>: Colored bars only.</li>
-<li><b>Pack view</b>: Colored bars with CpG probe IDs.</li>
-<li><b>Full view</b>: Colored bars with CpG probe IDs.</li>
-</ul>
+
+<p>
+The <b>Direction of methylation change</b> filter uses the episignature with the 
+largest absolute delta-beta value at a site. As a result, when multiple 
+episignatures share a CpG and report different directions of methylation change, 
+the filter reflects only the direction associated with the largest absolute 
+delta-beta value. The table on the details page lists every episignature at 
+the site with its own direction.
+</p>
+
+<p>
+Clicking a site opens a page with a table of every episignature at that site, 
+one row each, giving the gene or locus, the disorder, its OMIM entry, 
+the direction, the delta-beta, the adjusted p-value, and the multiple-testing 
+correction that the publishing study used. Studies differ in which correction 
+they applied, so the adjusted p-values in one row are not always directly 
+comparable with those in another.
+</p>
+
+<p>
+Four filters are available on the track configuration page. The <b>Episignature</b> 
+filter keeps only sites that are part of <i>all</i> of the selected episignatures, 
+which is the way to find the CpGs that two or more disorders have in common. 
+The others keep a site by the <b>Number of episignatures at this probe</b>, the 
+<b>Direction of methylation change</b>, and the <b>Largest absolute delta-beta of the  
+episignature at this probe</b>. The last one also appears on the Episignatures 
+collection page, where it filters both tracks at once.
+</p>
 
 <h2>Mouse-over Information</h2>
 
@@ -53,9 +90,9 @@ Hovering over a CpG displays:
 </p>
 
 <ul>
-<li>The episignature driving the displayed color (highest absolute deltaBeta).</li>
+<li>The episignature driving the displayed color (largest absolute delta-beta).</li>
 <li>The methylation direction (Gain or Loss).</li>
-<li>The corresponding deltaBeta value.</li>
+<li>The corresponding delta-beta value.</li>
 </ul>
 
 <p>
@@ -66,71 +103,14 @@ Example (cg16689481):
 NSD1 | Gain | 0.318
 </pre>
 
-<h2>Item Details Page</h2>
+<h2>Included episignatures</h2>
 
 <p>
-Clicking on a CpG probe opens a detailed comparison table showing
-all episignatures that contain that CpG.
+The 24 episignatures in the track, with the number of CpG sites each contributes 
+and the study that published it. Two signatures are listed for Kabuki syndrome, 
+from a 2017 and a 2026 study, and they are kept apart rather than merged.
 </p>
 
-<p>
-The table includes:
-</p>
-
-<ul>
-<li>Gene</li>
-<li>Associated disorder</li>
-<li>OMIM identifier</li>
-<li>Methylation direction</li>
-<li>deltaBeta</li>
-<li>Adjusted p-value</li>
-<li>Multiple-testing correction method</li>
-</ul>
-
-</p>
-
-<p>Example (cg16689481):</p>
-<table border='1' cellpadding='7' cellspacing='0'>
-<tr>
-<th>Gene</th>
-<th>Disorder</th>
-<th>OMIM_ID</th>
-<th>Direction</th>
-<th>deltaBeta</th>
-<th>adjPValue</th>
-<th>Correction</th>
-</tr>
-<tr><td>NSD1</td><td>Sotos syndrome</td><td>117550</td><td>Gain</td><td>0.318</td><td>0.00139</td><td>Bonferroni</td></tr>
-<tr><td>T21</td><td>Down syndrome</td><td>190685</td><td>Gain</td><td>0.166</td><td>0.00231</td><td>BH-FDR</td></tr>
-</table>
-
-<h2>Filters</h2>
-
-<ul>
-
-<li>
-<b>Episignature Filter</b>:
-Select one or more episignatures to display CpGs that overlap
-the chosen signatures.
-</li>
-
-<li>
-<b>Number of overlapping episignatures</b>:
-Restrict the display to CpGs present in a specified number
-of episignatures.
-</li>
-
-</ul>
-
-
-</ul>
-
-<p>
-Users interested in specific disease mechanisms can use the
-episignature filters to identify shared CpGs between disorders
-such as autism-related episignatures, overgrowth syndromes,
-and neurodevelopmental disorders.
-</p>
 
 <h2>Included Episignatures</h2>
 <p>Click an OMIM ID or Reference to open the corresponding record.</p>
@@ -166,24 +146,79 @@ and neurodevelopmental disorders.
 <tr><td>Williams</td><td>Williams-Beuren syndrome</td><td><a href=https://omim.org/entry/194050 target="_blank">194050</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/26166478/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/26166478/</a></td></tr>
 <tr><td>T21</td><td>Down syndrome</td><td><a href=https://omim.org/entry/190685 target="_blank">190685</a></td><td><a href=https://pubmed.ncbi.nlm.nih.gov/42492524/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/42492524/</a></td></tr>
 </table>
-<h2>Probe Annotation</h2>
 
+<h2>Methods</h2>
+
+<p>
+Each episignature was established by comparing genome-wide DNA methylation, 
+measured on Illumina methylation arrays in blood, between a group of individuals 
+carrying pathogenic variants in the gene or locus concerned and a control group, 
+and keeping the CpG probes whose case-control difference survived correction for 
+multiple testing. The studies behind the individual signatures are listed in the 
+table above and differ in cohort size, array version, and statistical treatment; 
+EpigenCentral uses these published DNA methylation signatures to develop 
+classification models that enable users to compare their own methylation data 
+against established episignatures. 
+</p>
 <p>
 All CpG probes displayed in this track were mapped using Illumina
 Infinium MethylationEPIC v2 (EPIC v2) array annotations. Only probes
 with valid hg38 genomic coordinates and present in the EPIC v2
 annotation set were included in the final track.
+The portal and the classification it offers 
+are described in Turinsky <i>et al</i>.
 </p>
-
-<hr>
-
 <p>
-DNA methylation signature sites available through 
-<a href="https://epigen.ccm.sickkids.ca/" target="_blank">
-EpigenCentral.
-</a>
-
+The data came from the track hub that the EpigenCentral group publishes at 
+<a href="https://github.com/ccmbioinfo/EpigenCentral-UCSC-Genome-Browser" target="_blank">
+<b>github.com/ccmbioinfo/EpigenCentral-UCSC-Genome-Browser</b></a>, whose <code>episignatures.bb</code> 
+file already carries the probe coordinates on hg38. Bringing it in as a track hosted 
+here changed four things and no coordinates or values: the OMIM column was reduced 
+from a full URL to the entry number so the browser can build the link itself; 
+a pre-rendered mouse-over column was replaced by the direction alone, with the 
+mouse-over text assembled from the fields instead; the disorder of the strongest 
+episignature was added as its own column; and 215 rows repeated within the 
+per-site comparison table, affecting 137 sites, were removed, since the site&apos;s 
+own count of episignatures already counted each one once. As a check on the coordinates, 
+5,000 sampled sites all fall on a CG dinucleotide in the hg38 sequence, and 
+all 14,236 probes the track shares with the MethaDory track are at the same 
+position in both. The commands are in the makedoc, <a href="https://github.com/ucscGenomeBrowser/kent/blob/master/src/hg/makeDb/doc/hg38/episignatures.txt" 
+target="_blank"><b>doc/hg38/episignatures.txt</b></a>, 
+the scripts in <a href=
+"https://github.com/ucscGenomeBrowser/kent/tree/master/src/hg/makeDb/scripts/episignatures" 
+target="_blank"><b>makeDb/scripts/episignatures</b></a>, and the track settings in
+<a href="https://github.com/ucscGenomeBrowser/kent/blob/master/src/hg/makeDb/trackDb/human/hg38/episignatures.ra" target="_blank">
+<b>trackDb/human/hg38/episignatures.ra</b></a>.
 </p>
 
+<h2> Data Access </h2>
+<p>
+At the request of the data providers this track is not available through the 
+<a href="https://hgwdev-max.gi.ucsc.edu/cgi-bin/hgTables?hgsid=493854394_p7BCae7J7aeb0zNq0ijfWmRZK8U5" target="_blank"><b>Table Browser</b></a>, the
+<a href="https://hgwdev-max.gi.ucsc.edu/cgi-bin/hgIntegrator?hgsid=493854394_p7BCae7J7aeb0zNq0ijfWmRZK8U5" target="_blank"><b>Data Integrator</b></a>, or the 
+<a href="https://api.genome.ucsc.edu/" target="_blank"><b>REST API</b></a>. Please obtain 
+the data from EpigenCentral instead, either from the portal at <a href="https://epigen.ccm.sickkids.ca/" target="_blank"><b>epigen.ccm.sickkids.ca</b></a> or 
+from the track hub repository at <a href="https://github.com/ccmbioinfo/EpigenCentral-UCSC-Genome-Browser" target="_blank"><b>github.com/ccmbioinfo/EpigenCentral-UCSC-Genome-Browser</b></a>, 
+where the same annotation is distributed as a bigBed file. The file can be read 
+with our tool bigBedToBed, which can be compiled from the source code or downloaded 
+as a precompiled binary for your system; instructions for downloading source code 
+and binaries can be found <a href="https://hgdownload.soe.ucsc.edu/downloads.html#utilities_downloads" target="_blank"><b>here</b></a>.
+</p>
+
+<h2> Credits </h2>
+<p>
+Thanks to the Center for Computational Medicine and the Weksberg lab at the Hospital for Sick Children (SickKids) in Toronto 
+for curating the episignatures and for building the track hub this track is based on. 
+Thanks also to the groups whose published episignatures are collected here, listed in the table above. 
+The track was brought to the Genome Browser by Eliza Alde, Barali Kitiyakara, Max Haeussler, 
+and Jairo Navarro.
+</p>
+
+
+<h2> References </h2>
+<p>
+Turinsky AL, Choufani S, Lu K, Liu D, Mashouri P, Min D, Weksberg R, Brudno M.
+<a href="https://pubmed.ncbi.nlm.nih.gov/32623772/" target="_blank"><b>EpigenCentral: Portal for DNA methylation data analysis and classification in rare diseases</b></a>
+</p>
 </body>
 </html>
