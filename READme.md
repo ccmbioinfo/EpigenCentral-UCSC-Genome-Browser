@@ -23,7 +23,7 @@ EpigenCentral is a research resource for DNA methylation signatures associated w
 
 Each CpG is displayed as a colored genomic feature:
 Delta beta values are calculated as mean methylation in cases minus mean methylation in controls (deltaBeta = Cases − Controls). 
-Positive deltaBeta values indicate increased methylation in cases (Gain), whereas negative deltaBeta values indicate decreased methylation in cases (Loss).
+Positive delta-beta values indicate increased methylation in cases (Gain), whereas negative delta-beta values indicate decreased methylation in cases (Loss).
 
 - **Orange** (`255,95,1`) = gain of methylation
 - **Blue** (`0,114,235`) = loss of methylation
